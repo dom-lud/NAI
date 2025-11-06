@@ -50,14 +50,8 @@ Prędkość wentylatora: 72.35%
 
 ---
 
-## Rozszerzenia projektu
-
-✅ dodanie więcej reguł
-✅ integracja ze sprzętem (Raspberry Pi / Arduino + PWM)
-✅ wykres zależności wejść–wyjścia
-
----
 
 ## Autorzy
 
-Projekt wykonany jako implementacja sterownika rozmytego w Pythonie.
+ Dominik Ludwiński
+ Bartosz Dembowski
