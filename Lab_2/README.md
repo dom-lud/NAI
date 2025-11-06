@@ -37,7 +37,7 @@ pip install scikit-fuzzy numpy matplotlib
 ## Uruchomienie
 
 ```bash
-python fan_fuzzy.py
+python fuzzyFan.py
 ```
 
 ---
