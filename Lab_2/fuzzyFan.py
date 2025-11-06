@@ -87,17 +87,25 @@ def setup_fuzzy_system():
 
     # ---- Prędkość wentylatora ----
     fan_speed['very_low'] = fuzz.trimf(fan_speed.universe, [0, 0, 15])
-    fan_speed['low'] = fuzz.trimf(fan_speed.universe, [10, 25, 40])
-    fan_speed['medium'] = fuzz.trimf(fan_speed.universe, [35, 55, 75])
-    fan_speed['high'] = fuzz.trimf(fan_speed.universe, [70, 100, 100])
+    fan_speed['low']      = fuzz.trimf(fan_speed.universe, [10, 20, 30])
+    fan_speed['medium']   = fuzz.trimf(fan_speed.universe, [25, 35, 50])
+    fan_speed['high']     = fuzz.trimf(fan_speed.universe, [45, 75, 100])
 
     # ---- Reguły ----
     rules = [
+        # wysokie fan_speed
         ctrl.Rule(temperature['high'] | air_quality['bad'], fan_speed['high']),
-        ctrl.Rule(temperature['medium'] | air_quality['medium'], fan_speed['medium']),
+        # średni fan_speed
+        ctrl.Rule(temperature['medium'] & air_quality['medium'], fan_speed['medium']),
         ctrl.Rule(humidity['high'], fan_speed['medium']),
+        # niski fan_speed
+        ctrl.Rule(temperature['ideal'] & air_quality['medium'], fan_speed['low']),
+        ctrl.Rule(temperature['medium'] & air_quality['good'], fan_speed['low']),
         ctrl.Rule(temperature['ideal'] & humidity['medium'] & air_quality['good'], fan_speed['low']),
-        ctrl.Rule(temperature['ideal'] & humidity['ideal'] & air_quality['ideal'], fan_speed['very_low'])
+        # bardzo niski fan_speed
+        ctrl.Rule(temperature['ideal'] & humidity['ideal'] & air_quality['ideal'], fan_speed['very_low']),
+        ctrl.Rule(temperature['low'] & air_quality['good'], fan_speed['very_low']),
+        ctrl.Rule(temperature['low'] & humidity['ideal'], fan_speed['very_low']),
     ]
 
     controller = ctrl.ControlSystem(rules)
@@ -126,7 +134,7 @@ def run_simulation():
     H_MIN, H_MAX = 40, 60
     PM_MIN, PM_MAX = 0, 100
 
-    temp = 35.0
+    temp = 40.0
     hum = 65.0
     pm = 160.0
 
@@ -150,7 +158,7 @@ def run_simulation():
         history["fan"].append(fan)
 
         # 🔹 Bardziej realistyczny model środowiska
-        temp += (22 - temp) * 0.03 - fan * 0.02
+        temp += (22 - temp) * 0.03 - fan * 0.01
         hum += (55 - hum) * 0.02 - fan * 0.005 + np.random.uniform(-0.2, 0.2)
         pm += (80 - pm) * 0.04 - fan * 0.05
 
