@@ -1,3 +1,35 @@
+"""
+Projekt: Fuzzy Logic – sterowanie prędkością wentylatora
+
+Opis:
+System steruje prędkością wentylatora na podstawie temperatury,
+wilgotności oraz jakości powietrza (PM2.5) przy użyciu logiki rozmytej Mamdaniego.
+
+Wejścia:
+- temperature (0–40 °C)
+- humidity (0–100 %)
+- air_quality (0–500 PM2.5)
+
+Wyjście:
+- fan_speed (0–100 %) – sterowanie prędkością wentylatora
+
+Autor: 
+Dominik Ludwiński
+Bartosz Dembowski
+
+Wymagania środowiskowe
+Instalacja Python
+Python 3.10+ zalecany
+
+Instalacja zależności:
+pip install scikit-fuzzy numpy matplotlib
+
+Uruchomienie:
+python fan_fuzzy.py
+
+
+"""
+
 import numpy as np
 import skfuzzy as fuzz
 from skfuzzy import control as ctrl
@@ -59,4 +91,5 @@ print(f"Prędkość wentylatora: {fan_sim.output['fan_speed']:.2f}%")
 
 # --- Wykresy przynależności ---
 temperature.view(); humidity.view(); air_quality.view(); fan_speed.view();
+
 plt.show()
