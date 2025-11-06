@@ -25,7 +25,7 @@ Instalacja zależności:
 pip install scikit-fuzzy numpy matplotlib
 
 Uruchomienie:
-python fan_fuzzy.py
+python fuzzyFan.py
 
 
 """
@@ -93,3 +93,4 @@ print(f"Prędkość wentylatora: {fan_sim.output['fan_speed']:.2f}%")
 temperature.view(); humidity.view(); air_quality.view(); fan_speed.view();
 
 plt.show()
+
