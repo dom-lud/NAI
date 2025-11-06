@@ -4,9 +4,9 @@
 
 System steruje prędkością wentylatora w zależności od trzech parametrów środowiskowych:
 
-* **Temperatura** (0–40°C)
+* **Temperatura** (18–40°C)
 * **Wilgotność** (0–100%)
-* **Jakość powietrza PM2.5** (0–500)
+* **Jakość powietrza** (0–500)
 
 Wyjściem systemu jest:
 
@@ -40,13 +40,6 @@ pip install scikit-fuzzy numpy matplotlib
 python fuzzyFan.py
 ```
 
----
-
-## Przykładowy wynik
-
-```
-Prędkość wentylatora: 72.35%
-```
 
 ---
 
