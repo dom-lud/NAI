@@ -1,1 +1,16 @@
+Projekt: Regulator prędkości wentylatora z użyciem logiki rozmytej
+Opis projektu
 
+System steruje prędkością wentylatora w zależności od trzech parametrów środowiskowych:
+
+Temperatura (0–40°C)
+
+Wilgotność (0–100%)
+
+Jakość powietrza PM2.5 (0–500)
+
+Wyjściem systemu jest:
+
+Prędkość wentylatora (0–100%)
+
+System wykorzystuje logikę rozmytą do określania optymalnej prędkości wentylatora w czasie rzeczywistym.
