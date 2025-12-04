@@ -14,7 +14,17 @@ Opis:
         - ocenienie jakości klasyfikacji na podstawie metryk.
 
 Instrukcja użycia:
-    python ecoli_svm.py
+    Wymagane pakiety Python:
+        numpy
+        pandas
+        scikit-learn
+        matplotlib
+
+    Instalacja zależności:
+        pip install numpy pandas scikit-learn matplotlib
+
+    Uruchomienie
+        python ecoli_svm.py
 
 Źródło danych (Ecoli):
     UCI / Machine Learning Repository:

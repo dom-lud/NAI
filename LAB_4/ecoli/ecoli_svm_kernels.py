@@ -15,7 +15,17 @@ Opis:
         - macro F1-score (średnia po klasach)
 
 Instrukcja użycia:
-    python ecoli_svm_kernels.py
+    Wymagane pakiety Python:
+        numpy
+        pandas
+        scikit-learn
+        matplotlib
+
+    Instalacja zależności:
+        pip install numpy pandas scikit-learn matplotlib
+
+    Uruchomienie
+        python ecoli_svm_kernels.py
 
 Źródło danych (Ecoli):
     UCI / Machine Learning Repository:

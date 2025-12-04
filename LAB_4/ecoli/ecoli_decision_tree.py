@@ -15,7 +15,17 @@ Opis:
     eksperyment z różnymi wartościami parametru max_depth.
 
 Instrukcja użycia:
-    python ecoli_decision_tree.py
+    Wymagane pakiety Python:
+        numpy
+        pandas
+        scikit-learn
+        matplotlib
+
+    Instalacja zależności:
+        pip install numpy pandas scikit-learn matplotlib
+
+    Uruchomienie
+        python ecoli_decision_tree.py
 
 Źródło danych (Ecoli):
     UCI / Machine Learning Repository:

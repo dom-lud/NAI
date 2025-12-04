@@ -21,7 +21,17 @@ Opis:
         - pokazuje przykład klasyfikacji pojedynczej próbki.
 
 Instrukcja użycia:
-    python wine_svm.py
+    Wymagane pakiety Python:
+        numpy
+        pandas
+        scikit-learn
+        matplotlib
+
+    Instalacja zależności:
+        pip install numpy pandas scikit-learn matplotlib
+
+    Uruchomienie
+        python wine_svm.py
 
 Źródło danych (Wine Quality – Red):
     UCI Machine Learning Repository:

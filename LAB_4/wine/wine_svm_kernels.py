@@ -20,7 +20,17 @@ Opis:
         - F1-score (macro).
 
 Instrukcja użycia:
-    python wine_svm_kernels.py
+    Wymagane pakiety Python:
+        numpy
+        pandas
+        scikit-learn
+        matplotlib
+
+    Instalacja zależności:
+        pip install numpy pandas scikit-learn matplotlib
+
+    Uruchomienie
+        python wine_svm_kernels.py
 
 Źródło danych:
     UCI Machine Learning Repository:

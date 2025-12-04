@@ -21,7 +21,17 @@ Opis:
         - sprawdzić wpływ parametru max_depth na accuracy.
 
 Instrukcja użycia:
-    python wine_decision_tree.py
+    Wymagane pakiety Python:
+        numpy
+        pandas
+        scikit-learn
+        matplotlib
+
+    Instalacja zależności:
+        pip install numpy pandas scikit-learn matplotlib
+
+    Uruchomienie
+        python wine_decision_tree.py
 
 Źródło danych (Wine Quality – Red):
     UCI Machine Learning Repository:
