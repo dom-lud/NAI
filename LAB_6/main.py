@@ -15,7 +15,7 @@ Mapowanie gestów:
 2) FIST                   -> PAUSE
 3) PEACE (V)              -> NEXT (track + 1)
 4) THREE (3 palce)        -> PREVIOUS (track - 1)
-5) THUMB_UP lub PINCH     -> VOLUME UP (+5)
+5) THUMB_UP               -> VOLUME UP (+5)
 6) THUMB_DOWN             -> VOLUME DOWN (-5)
 
 Sterowanie:
